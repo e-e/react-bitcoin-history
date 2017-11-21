@@ -20,4 +20,6 @@ import BitcoinHistory from 'react-bitcoin-history';
 ```
 
 Click on a transaction item to expand:
+
+
 ![](https://i.imgur.com/X2OREFn.png)
