@@ -301,8 +301,6 @@ function fetchTransactions(address) {
       return response.json();
     }).then(function (data) {
       data = data.map(function (t) {
-        throw new Error('woops!');
-
         var _t = _slicedToArray(t, 8),
             timestamp = _t[0],
             hash = _t[1],
@@ -330,7 +328,6 @@ function fetchTransactions(address) {
         error: null
       });
     }).catch(function (err) {
-      console.log('err: ', err);
       dispatch({
         type: RECEIVE_TRANSACTIONS,
         payload: [],
@@ -1896,7 +1893,6 @@ var TransasctionsList = function (_Component) {
   _createClass(TransasctionsList, [{
     key: 'renderError',
     value: function renderError() {
-      console.log('ERROR: ', this.props.transactions.error.message);
       return _react2.default.createElement(
         'div',
         { className: 'btc-history-error' },
@@ -1916,6 +1912,14 @@ var TransasctionsList = function (_Component) {
         );
       }
       if (this.props.transactions.error) return this.renderError();
+
+      if (!this.props.transactions.data && this.props.transactions.requestCount) {
+        return _react2.default.createElement(
+          'li',
+          null,
+          'There are no transactions for this address'
+        );
+      }
 
       return this.props.transactions.data.map(function (t) {
         var active = t.hash === _this2.props.activeTransactionId;
@@ -2103,7 +2107,11 @@ exports.default = function () {
 
   switch (action.type) {
     case _actions.RECEIVE_TRANSACTIONS:
-      return { data: [].concat(_toConsumableArray(action.payload)), error: action.error };
+      return {
+        data: [].concat(_toConsumableArray(action.payload)),
+        error: action.error,
+        requestCount: state.requestCount + 1
+      };
 
     default:
       return state;
@@ -2116,7 +2124,8 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 
 var INITIAL_STATE = {
   data: [],
-  error: null
+  error: null,
+  requestCount: 0
 };
 
 /***/ }),

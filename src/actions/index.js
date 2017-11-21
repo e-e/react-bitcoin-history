@@ -20,7 +20,6 @@ export function fetchTransactions(address) {
       .then(response => response.json())
       .then(data => {
         data = data.map(t => {
-          throw new Error('woops!');
           const [
             timestamp,
             hash,
@@ -49,7 +48,6 @@ export function fetchTransactions(address) {
         });
       })
       .catch(err => {
-        console.log('err: ', err);
         dispatch({
           type: RECEIVE_TRANSACTIONS,
           payload: [],

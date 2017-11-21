@@ -6,7 +6,6 @@ import TransactionListItem from './TransactionListItem';
 
 class TransasctionsList extends Component {
   renderError() {
-    console.log('ERROR: ', this.props.transactions.error.message);
     return (
       <div className="btc-history-error">
         There was a problem loading the transaction history
@@ -18,6 +17,10 @@ class TransasctionsList extends Component {
       return <li className="transaction-list-item">Loading...</li>;
     }
     if (this.props.transactions.error) return this.renderError();
+
+    if (!this.props.transactions.data && this.props.transactions.requestCount) {
+      return <li>There are no transactions for this address</li>;
+    }
 
     return this.props.transactions.data.map(t => {
       const active = t.hash === this.props.activeTransactionId;
