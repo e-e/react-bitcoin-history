@@ -2,10 +2,13 @@
 
 #### local setup
 ```git clone https://github.com/e-e/react-bitcoin-history.git```
+
 ```cd react-bitcoin-history```
+
 ```npm link```
 
 Then in your actual project directory:
+
 ``` npm link react-bitcoin-history```
 
 
