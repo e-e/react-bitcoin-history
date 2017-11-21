@@ -4,7 +4,7 @@ import { createStore, applyMiddleware, bindActionCreators } from 'redux';
 import ReduxThunk from 'redux-thunk';
 import rootReducer from './reducers';
 
-import './main.css';
+import './styles.css';
 
 import BitcoinHistoryOuter from './components/BitcoinHistoryOuter';
 

@@ -1661,37 +1661,7 @@ thunk.withExtraArgument = createThunkMiddleware;
 exports['default'] = thunk;
 
 /***/ }),
-/* 24 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(32);
-if(typeof content === 'string') content = [[module.i, content, '']];
-// Prepare cssTransformation
-var transform;
-
-var options = {"hmr":true}
-options.transform = transform
-// add the styles to the DOM
-var update = __webpack_require__(60)(content, options);
-if(content.locals) module.exports = content.locals;
-// Hot Module Replacement
-if(false) {
-	// When the styles change, update the <style> tags
-	if(!content.locals) {
-		module.hot.accept("!!../node_modules/css-loader/index.js!./main.css", function() {
-			var newContent = require("!!../node_modules/css-loader/index.js!./main.css");
-			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-			update(newContent);
-		});
-	}
-	// When the module is disposed, remove the <style> tags
-	module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
+/* 24 */,
 /* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1988,7 +1958,7 @@ var _reducers = __webpack_require__(22);
 
 var _reducers2 = _interopRequireDefault(_reducers);
 
-__webpack_require__(24);
+__webpack_require__(68);
 
 var _BitcoinHistoryOuter = __webpack_require__(21);
 
@@ -2129,20 +2099,7 @@ var INITIAL_STATE = {
 };
 
 /***/ }),
-/* 32 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(33)(undefined);
-// imports
-exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Roboto);", ""]);
-
-// module
-exports.push([module.i, ".bitcoin-history {\r\n  color: #777;\r\n  font-family: 'Roboto', sans-serif;\r\n  padding: 10px;\r\n}\r\n.transaction-list {\r\n  margin: 0px;\r\n  padding: 0px;\r\n  max-height: 500px;\r\n  overflow-y: scroll;\r\n}\r\n.transaction-list .transaction-list-item {\r\n  list-style-type: none;\r\n  padding: 10px 15px;\r\n  border: 1px solid rgba(255, 255, 255, 0);\r\n}\r\n.transaction-list .transaction-list-item:hover {\r\n  /*font-style: italic;*/\r\n  cursor: pointer;\r\n  border: 1px solid rgba(200, 200, 200, 0.5);\r\n}\r\n\r\n.btc-form-wrap {\r\n  margin-bottom: 10px;\r\n}\r\n.btc-address-wrap {\r\n  display: flex;\r\n  flex-direction: row;\r\n  align-items: center;\r\n}\r\n.btc-address {\r\n  flex: 1;\r\n  border-radius: 4px;\r\n  padding: 5px 10px;\r\n  color: #555;\r\n  border: 1px solid rgba(200, 200, 200, 0.5);\r\n}\r\n.btc-address-set {\r\n  flex: 0 0 50px;\r\n  text-align: center;\r\n}\r\n.btc-address-set a {\r\n  text-decoration: none;\r\n}\r\n.cap {\r\n  text-transform: capitalize;\r\n}\r\n.transaction-date-label {\r\n  text-transform: uppercase;\r\n  font-size: 0.8em;\r\n}\r\n.transaction-date {\r\n  text-transform: uppercase;\r\n  font-size: 0.8em;\r\n  color: #555;\r\n}\r\n\r\n.transaction-sent {\r\n  color: #cc4b37;\r\n}\r\n.transaction-received {\r\n  color: #3adb76;\r\n}\r\n.transaction-item {\r\n  display: flex;\r\n  flex-direction: row;\r\n  justify-content: space-between;\r\n  align-items: center;\r\n}\r\n\r\n.info-item {\r\n  margin-top: 5px;\r\n  display: flex;\r\n  flex-direction: column;\r\n}\r\n.info-item:not(:last-child) {\r\n  margin-bottom: 5px;\r\n}\r\n.info-item .label {\r\n  font-size: 0.8em;\r\n  text-transform: uppercase;\r\n  font-weight: bolder;\r\n  text-decoration: underline;\r\n}\r\n.info-item .value {\r\n  font-size: 0.8em;\r\n}\r\n.info-item .value.break {\r\n  word-wrap: break-word;\r\n}\r\n", ""]);
-
-// exports
-
-
-/***/ }),
+/* 32 */,
 /* 33 */
 /***/ (function(module, exports) {
 
@@ -4896,6 +4853,51 @@ var TransasctionInfo = function TransasctionInfo(_ref) {
 };
 
 exports.default = TransasctionInfo;
+
+/***/ }),
+/* 68 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(69);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {"hmr":true}
+options.transform = transform
+// add the styles to the DOM
+var update = __webpack_require__(60)(content, options);
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../node_modules/css-loader/index.js!./styles.css", function() {
+			var newContent = require("!!../node_modules/css-loader/index.js!./styles.css");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 69 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(33)(undefined);
+// imports
+exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Roboto);", ""]);
+
+// module
+exports.push([module.i, ".bitcoin-history {\r\n  color: #777;\r\n  font-family: 'Roboto', sans-serif;\r\n  padding: 10px;\r\n  max-width:600px;\r\n}\r\n.transaction-list {\r\n  margin: 0px;\r\n  padding: 0px;\r\n  max-height: 500px;\r\n  overflow-y: scroll;\r\n}\r\n.transaction-list .transaction-list-item {\r\n  list-style-type: none;\r\n  padding: 10px 15px;\r\n  border: 1px solid rgba(255, 255, 255, 0);\r\n}\r\n.transaction-list .transaction-list-item:hover {\r\n  /*font-style: italic;*/\r\n  cursor: pointer;\r\n  border: 1px solid rgba(200, 200, 200, 0.5);\r\n}\r\n\r\n.btc-form-wrap {\r\n  margin-bottom: 10px;\r\n}\r\n.btc-address-wrap {\r\n  display: flex;\r\n  flex-direction: row;\r\n  align-items: center;\r\n}\r\n.btc-address {\r\n  flex: 1;\r\n  border-radius: 4px;\r\n  padding: 5px 10px;\r\n  color: #555;\r\n  border: 1px solid rgba(200, 200, 200, 0.5);\r\n}\r\n.btc-address-set {\r\n  flex: 0 0 50px;\r\n  text-align: center;\r\n}\r\n.btc-address-set a {\r\n  text-decoration: none;\r\n}\r\n.cap {\r\n  text-transform: capitalize;\r\n}\r\n.transaction-date-label {\r\n  text-transform: uppercase;\r\n  font-size: 0.8em;\r\n}\r\n.transaction-date {\r\n  text-transform: uppercase;\r\n  font-size: 0.8em;\r\n  color: #555;\r\n}\r\n\r\n.transaction-sent {\r\n  color: #cc4b37;\r\n}\r\n.transaction-received {\r\n  color: #3adb76;\r\n}\r\n.transaction-item {\r\n  display: flex;\r\n  flex-direction: row;\r\n  justify-content: space-between;\r\n  align-items: center;\r\n}\r\n\r\n.info-item {\r\n  margin-top: 5px;\r\n  display: flex;\r\n  flex-direction: column;\r\n}\r\n.info-item:not(:last-child) {\r\n  margin-bottom: 5px;\r\n}\r\n.info-item .label {\r\n  font-size: 0.8em;\r\n  text-transform: uppercase;\r\n  font-weight: bolder;\r\n  text-decoration: underline;\r\n}\r\n.info-item .value {\r\n  font-size: 0.8em;\r\n}\r\n.info-item .value.break {\r\n  word-wrap: break-word;\r\n}\r\n", ""]);
+
+// exports
+
 
 /***/ })
 /******/ ]);
