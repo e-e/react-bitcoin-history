@@ -1,0 +1,41 @@
+{
+  "name": "react-bitcoin-history",
+  "version": "0.0.1",
+  "description": "",
+  "main": "build/index.js",
+  "peerDependencies": {
+    "react": "^15.5.4"
+  },
+  "dependencies": {
+    "chai": "^4.1.2",
+    "enzyme": "^3.1.0",
+    "jsdom": "^11.3.0",
+    "mocha": "^4.0.1",
+    "react": "^15.6.2",
+    "react-addons-test-utils": "^15.6.2",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0",
+    "sinon": "^4.0.2",
+    "webpack": "^2.7.0"
+  },
+  "scripts": {
+    "test": "mocha --require setup.js test/*.spec.js",
+    "start": "webpack --watch",
+    "build": "webpack"
+  },
+  "author": {
+    "name": "Eric Ellingson",
+    "email": "god@eric.wtf"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
+    "css-loader": "^0.28.7",
+    "style-loader": "^0.19.0"
+  }
+}

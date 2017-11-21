@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+.bitcoin-history {
+  color: #777;
+  font-family: 'Roboto', sans-serif;
+  padding: 10px;
+}
+.transaction-list {
+  margin: 0px;
+  padding: 0px;
+  max-height: 500px;
+  overflow-y: scroll;
+}
+.transaction-list .transaction-list-item {
+  list-style-type: none;
+  padding: 10px 15px;
+  border: 1px solid rgba(255, 255, 255, 0);
+}
+.transaction-list .transaction-list-item:hover {
+  /*font-style: italic;*/
+  cursor: pointer;
+  border: 1px solid rgba(200, 200, 200, 0.5);
+}
+
+.btc-form-wrap {
+  margin-bottom: 10px;
+}
+.btc-address-wrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.btc-address {
+  flex: 1;
+  border-radius: 4px;
+  padding: 5px 10px;
+  color: #555;
+  border: 1px solid rgba(200, 200, 200, 0.5);
+}
+.btc-address-set {
+  flex: 0 0 50px;
+  text-align: center;
+}
+.btc-address-set a {
+  text-decoration: none;
+}
+.cap {
+  text-transform: capitalize;
+}
+.transaction-date-label {
+  text-transform: uppercase;
+  font-size: 0.8em;
+}
+.transaction-date {
+  text-transform: uppercase;
+  font-size: 0.8em;
+  color: #555;
+}
+
+.transaction-sent {
+  color: #cc4b37;
+}
+.transaction-received {
+  color: #3adb76;
+}
+.transaction-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info-item {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+}
+.info-item:not(:last-child) {
+  margin-bottom: 5px;
+}
+.info-item .label {
+  font-size: 0.8em;
+  text-transform: uppercase;
+  font-weight: bolder;
+  text-decoration: underline;
+}
+.info-item .value {
+  font-size: 0.8em;
+}
+.info-item .value.break {
+  word-wrap: break-word;
+}
